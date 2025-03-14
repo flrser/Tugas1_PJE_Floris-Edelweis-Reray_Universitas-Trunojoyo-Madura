@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Luas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 10px;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            margin-top: 5px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .calculator-section {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .persegi-panjang {
+            background-color: #cde4f6;
+        }
+        .bujur-sangkar {
+            background-color: #d6f7d6;
+        }
+        .segitiga {
+            background-color: #fbecd3;
+        }
+        h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .formula {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 3px;
+            font-size: 15px;
+        }
+        .calculation {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 8px;
+            padding: 8px;
+            background-color: #f9f9f9b0;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Fungsi untuk menghitung luas 
+        function luasPersegiPanjang(panjang, lebar) {
+            return panjang * lebar;
+        }
+        function luasBujurSangkar(sisi) {
+            return sisi * sisi;
+        }
+        function luasSegitiga(alas, tinggi) {
+            return (alas * tinggi) / 2;
+        }
+        // Variabel nilai
+        let panjang = 10;
+        let lebar = 5;
+        let sisi = 4;
+        let alas = 6;
+        let tinggi = 8;
+        
+        // Menampilkan konten
+        document.write("<div class='container'>");
+        document.write("<h2>Kalkulator Luas Bangun Datar</h2>");
+
+        // Persegi Panjang
+        document.write("<div class='calculator-section persegi-panjang'>");
+        document.write("<h3>Persegi Panjang</h3>");
+        document.write("<div class='formula'>Luas = Panjang × Lebar</div>");
+        document.write("<div class='calculation'>Nilai Panjang = " + panjang + "<br>Nilai Lebar = " + lebar + "</div>");
+        document.write("<div class='result'>Luas Persegi Panjang = " + luasPersegiPanjang(panjang, lebar) + "</div>");
+        document.write("</div>");
+
+        // Bujur Sangkar
+        document.write("<div class='calculator-section bujur-sangkar'>");
+        document.write("<h3>Bujur Sangkar (Persegi)</h3>");
+        document.write("<div class='formula'>Luas = Sisi × Sisi</div>");
+        document.write("<div class='calculation'>Nilai Sisi = " + sisi + "</div>");
+        document.write("<div class='result'>Luas Bujur Sangkar = " + luasBujurSangkar(sisi) + "</div>");
+        document.write("</div>");
+
+        // Segitiga
+        document.write("<div class='calculator-section segitiga'>");
+        document.write("<h3>Segitiga</h3>");
+        document.write("<div class='formula'>Luas = ½ × Alas × Tinggi</div>");
+        document.write("<div class='calculation'>Nilai Alas = " + alas + "<br>Nilai Tinggi = " + tinggi + "</div>");
+        document.write("<div class='result'>Luas Segitiga = " + luasSegitiga(alas, tinggi) + "</div>");
+        document.write("</div>");
+
+        document.write("</div>"); // Penutup container
+    </script>
+</body>
+</html>
